@@ -1,0 +1,137 @@
+
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.expense-form {
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+  animation: formAppear 0.25s ease;
+}
+
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.form-header h2 {
+  font-size: 22px;
+  color: #1f2937;
+  margin-bottom: 7px;
+}
+
+.form-header p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.close-button {
+  border: none;
+  background: #f3f4f6;
+  color: #6b7280;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.expense-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin: 15px 0 8px;
+}
+
+.expense-form input,
+.expense-form select,
+.expense-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #1f2937;
+  font: inherit;
+  font-size: 13px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.expense-form input:focus,
+.expense-form select:focus,
+.expense-form textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.expense-form textarea {
+  resize: vertical;
+}
+
+.character-count {
+  text-align: right;
+  color: #9ca3af;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+.form-error {
+  color: #dc2626;
+  background: #fef2f2;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.submit-expense-button {
+  margin-top: 22px;
+  padding: 14px;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-expense-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(124, 58, 237, 0.25);
+}
